@@ -6,6 +6,12 @@ const fs = require('fs');
 
 app.use(cors());
 
+app.get('/',(req, res) => {
+        
+    res.send('Hello Movies');
+});
+
+
 app.get('/list',async (req, res) => {
         
      fs.readFile('./data.json', (err, data) => {
